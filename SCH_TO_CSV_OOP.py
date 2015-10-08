@@ -203,7 +203,7 @@ root = Tk()
 root.configure(background='white')
 root.title("KiCAD Partslist-editor")
 root.bind("<Escape>", lambda e: e.widget.quit())
-background_image = PhotoImage(file="kicad-logo.png")
+background_image = PhotoImage(file="")
 background = Label(root, image=background_image, bd=0)
 background.pack()
 
