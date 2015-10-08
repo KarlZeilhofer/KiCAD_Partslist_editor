@@ -35,7 +35,7 @@ def OpenFile():
 				print("Error: can\'t find file or read data")
 			else:
 				mainFile.SetContents(f.readlines())
-				mainFile.setSchematicName("FlowRateControllerV2.sch")
+				mainFile.setSchematicName("filename")
 				f.close()
 				if mainFile.ParseComponents():
 					messagebox.showerror("FileParseError", "This is not a valid KiCAD schematic document.")
