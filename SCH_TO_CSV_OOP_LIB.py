@@ -253,14 +253,18 @@ class SCH_FILE(object):
 			#		print("parsed")
 				if test_var > 100000: # prevents fails
 					break
-		
+
 		for subcircuitcounter in range(len(self.subcircuits_names)):
-			
+			print(self.subcircuits_names)
+			#import pdb;pdb.set_trace()
 			#print("subcircuit")
+			print(self.path)
 			for p in range (len(self.path)):
 				if self.path[-p] == "/":
 					break
-			to_open = self.path[:-p+1] + self.subcircuits_names[subcircuitcounter]
+			#to_open = self.path[:-p+1] + self.subcircuits_names[subcircuitcounter]
+			import os
+			to_open = os.path.join(os.path.dirname(self.path), self.subcircuits_names[subcircuitcounter])
 			try:
 				f = open(to_open)
 			except IOError:
